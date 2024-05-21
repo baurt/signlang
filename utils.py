@@ -16,7 +16,7 @@ class SLInference:
         pred (str): The prediction result.
         thread (Thread): The worker thread.
     """
-    def __init__(self, config):
+    def __init__(self, config_path):
         """
         Initialize the SLInference object.
 
@@ -24,7 +24,7 @@ class SLInference:
             config_path (str): Path to the configuration file.
         """
         self.running = True
-        self.config = config
+        self.config = self.read_config(config_path)
         self.model = Predictor(self.config)
         self.input_queue = deque(maxlen=self.config["window_size"])
         self.pred = ""
