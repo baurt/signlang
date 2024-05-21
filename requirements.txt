@@ -39,7 +39,7 @@ numpy==1.26.4
 onnx==1.14.0
 onnxruntime==1.16.0
 openai==0.28.1
-opencv-python==4.9.0.80
+opencv-python-headless
 packaging==23.2
 pandas==2.2.2
 pillow==10.3.0
